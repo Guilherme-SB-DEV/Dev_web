@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+header{
+    padding: 40px 4%;
+}
+.logo{
+    color: blueviolet;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style-type: none;
+
+}
+header nav ul li{
+    display: inline;
+    padding: 100px;
+
+
+
+}
+header nav ul li a, .dropdown {
+    text-decoration: none;
+    color: gray;
+    font-size: 18pt;
+    display: inline-block;
+    transition: 0.1s;
+}
+header nav ul li a:hover{
+    color: #fff;
+    transform: scale(1.05);
+    transition: 0.1s;
+
+}
+.txt-topo{
+    gap: 90px;
+    line-height: 40px;
+}
+.butons{
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 50px;
+
+}
+.butons #git:hover, .butons #link:hover{
+    box-shadow: 0px 0px 10px #fff;
+    border-radius: 30px;
+    transform: scale(1.05);
+    transition: 0.1s;
+
+
+
+}
+#git{
+    background-color: black;
+    border: solid  white 1px;
+}
+#link, #git{
+    display: inline-block;
+    font-size: 15pt;
+    padding: 8px;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: 0.1s;
+
+}
+#link{
+    background-color: rgb(0, 119, 255);
+    border: 0;
+}
+@keyframes logo-animation{
+    0%{
+        scale: 100%;
+    }
+    100%{
+        scale: 100.1%;
+
+    }
+
+}
+#title{
+    zoom: 130%;
+    border-radius: 170px;
+    width: 120px;
+    height: 110px;
+    object-fit: cover;
+    object-position: -13px 0px ;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+
+
+
+}
+
+#title:hover{
+    transform:scale();
+    animation: logo-animation 0.1s;
+    -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+}
+
+
+h1{
+    color: white;
+}
+#link_icon, #git_icon{
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+
+}
+
+
+
+
+/* estilo do topo do site */
+section.topo_do_site .flex{
+    display: flex;
+}
+section.topo_do_site{
+    padding: 40px 4%;
+
+}
+.topo_do_site .flex{
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.topo_do_site{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex .btn_contato button{
+    width: 150px;
+    height: 50px;
+    padding:0px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: blueviolet;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.btn_contato button:hover{
+    box-shadow: 0px 0px 8px blueviolet;
+    transform: scale(1.05);
+    color: wheat;
+    transition: 0.1s;
+
+
+}
+.flex .txt_topo p{
+    margin: 10px;
+
+}
+
+.icons{
+    display: flex;
+
+    gap: 20px;
+}
+.icons img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: animacao 2s ease-in-out infinite alternate;
+
+
+}
+@keyframes animacao{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+
+.dropdown-menu, .dropdown-menu li{
+    padding: 0px;
+}
+
+
+.dropdown-item{
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
