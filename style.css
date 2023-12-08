@@ -1,68 +1,84 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-body{
-    background-color: black;
-    height: 100vh;
+html,
+body {
+    height: 100%;
+    width: 100%;
 }
 
-.interface{
+
+body {
+    background-color: black;
+}
+
+.interface {
     max-width: 1280px;
     margin: 0 auto;
 }
-header{
+
+header {
     padding: 40px 4%;
 }
-.logo{
+
+.logo {
     color: blueviolet;
 }
 
-header > .interface{
+header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-header nav ul{
+
+header nav ul {
     list-style-type: none;
 
 }
-header nav ul li{
+
+header nav ul li {
     display: inline;
-    padding: 100px;
+    padding: 70px;
 
 
 
 }
-header nav ul li a, .dropdown {
+
+header nav ul li a,
+.dropdown {
     text-decoration: none;
     color: gray;
     font-size: 18pt;
     display: inline-block;
     transition: 0.1s;
 }
-header nav ul li a:hover{
+
+header nav ul li a:hover {
     color: #fff;
     transform: scale(1.05);
     transition: 0.1s;
 
 }
-.txt-topo{
+
+.txt-topo {
     gap: 90px;
     line-height: 40px;
 }
-.butons{
+
+.butons {
     gap: 50px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     margin-top: 50px;
 
 }
-.butons #git:hover, .butons #link:hover{
+
+.butons #git:hover,
+.butons #link:hover {
     box-shadow: 0px 0px 10px #fff;
     border-radius: 30px;
     transform: scale(1.05);
@@ -71,11 +87,14 @@ header nav ul li a:hover{
 
 
 }
-#git{
+
+#git {
     background-color: black;
-    border: solid  white 1px;
+    border: solid white 1px;
 }
-#link, #git{
+
+#link,
+#git {
     display: inline-block;
     font-size: 15pt;
     padding: 8px;
@@ -85,27 +104,31 @@ header nav ul li a:hover{
     transition: 0.1s;
 
 }
-#link{
+
+#link {
     background-color: rgb(0, 119, 255);
     border: 0;
 }
-@keyframes logo-animation{
-    0%{
+
+@keyframes logo-animation {
+    0% {
         scale: 100%;
     }
-    100%{
+
+    100% {
         scale: 100.1%;
 
     }
 
 }
-#title{
+
+#title {
     zoom: 130%;
     border-radius: 170px;
     width: 120px;
     height: 110px;
     object-fit: cover;
-    object-position: -13px 0px ;
+    object-position: -13px 0px;
     display: inline-block;
     cursor: pointer;
     -webkit-transition: -webkit-transform .2s ease;
@@ -115,18 +138,20 @@ header nav ul li a:hover{
 
 }
 
-#title:hover{
-    transform:scale();
+#title:hover {
+    transform: scale();
     animation: logo-animation 0.1s;
     -webkit-transform: scale(1.1);
-   transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
-h1{
+h1 {
     color: white;
 }
-#link_icon, #git_icon{
+
+#link_icon,
+#git_icon {
     height: 20px;
     width: 20px;
     border-radius: 30px;
@@ -137,33 +162,38 @@ h1{
 
 
 /* estilo do topo do site */
-section.topo_do_site .flex{
+section.topo_do_site .flex {
     display: flex;
 }
-section.topo_do_site{
+
+section.topo_do_site {
     padding: 40px 4%;
 
 }
-.topo_do_site .flex{
+
+.topo_do_site .flex {
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
-.topo_do_site{
+
+.topo_do_site {
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.flex .btn_contato button{
+
+.flex .btn_contato button {
     width: 150px;
     height: 50px;
-    padding:0px;
+    padding: 0px;
     border-radius: 25px;
     border-style: none;
     background-color: blueviolet;
     cursor: pointer;
     transition: 0.1s;
 }
-.btn_contato button:hover{
+
+.btn_contato button:hover {
     box-shadow: 0px 0px 8px blueviolet;
     transform: scale(1.05);
     color: wheat;
@@ -171,17 +201,18 @@ section.topo_do_site{
 
 
 }
-.flex .txt_topo p{
+
+.flex .txt_topo p {
     margin: 10px;
 
 }
 
-.icons{
+.icons {
     display: flex;
-
     gap: 20px;
 }
-.icons img{
+
+.icons img {
     width: 50px;
     height: 50px;
     position: relative;
@@ -189,23 +220,53 @@ section.topo_do_site{
 
 
 }
-@keyframes animacao{
-    0%{
+
+@keyframes animacao {
+    0% {
         top: 0;
     }
-    100%{
+
+    100% {
         top: 10px;
     }
 }
 
 
-.dropdown-menu, .dropdown-menu li{
+.dropdown-menu,
+.dropdown-menu li {
     padding: 0px;
 }
 
 
-.dropdown-item{
+.dropdown-item {
     font-size: 15px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
+
+@media only screen and (max-width: 800px) {
+    .menu-desktop{
+        justify-content: unset;
+    }
+    .menu-desktop ul li {
+        text-align: justify;
+        display: inline;
+        padding: 10px;
+
+    }
+    main .interface .flex{
+        display: grid;
+        padding: 20%;
+        gap: 70%;
+        grid-template-rows: 20% 20% 20%;
+    }
+
+
+}
+
+@media only screen and (max-width: 110px) {
+    header nav ul li a{
+        padding: 10px;
+    }
+}
+
