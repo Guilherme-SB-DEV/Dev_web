@@ -1,3 +1,4 @@
+/* elementos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -8,24 +9,65 @@ html,
 body {
     height: 100%;
     width: 100%;
-}
-
-
-body {
     background-color: black;
-}
 
-.interface {
-    max-width: 1280px;
-    margin: 0 auto;
 }
 
 header {
     padding: 40px 4%;
 }
 
-.logo {
-    color: blueviolet;
+
+/* nav */
+
+nav {
+    position: fixed;
+    margin: 200px;
+    margin-top: 300px;
+
+}
+
+header nav ul li {
+    display: inline-block;
+
+}
+
+header nav ul li a{
+    margin-right:100px ;
+
+}
+
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+
+
+
+#title {
+    zoom: 160%;
+    border-radius: 180px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: -8px 0px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: transform .2s ease;
+
+
+
+}
+
+#title:hover {
+    transform: scale();
+    animation: logo-animation 0.1s;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 header>.interface {
@@ -39,13 +81,6 @@ header nav ul {
 
 }
 
-header nav ul li {
-    display: inline;
-    padding: 70px;
-
-
-
-}
 
 header nav ul li a,
 .dropdown {
@@ -68,6 +103,10 @@ header nav ul li a:hover {
     line-height: 40px;
 }
 
+
+/* minhas redes */
+
+
 .butons {
     gap: 50px;
     display: flex;
@@ -75,6 +114,9 @@ header nav ul li a:hover {
     justify-content: center;
     margin-top: 50px;
 
+}
+.butons a{
+    margin-top: 50px;
 }
 
 .butons #git:hover,
@@ -105,10 +147,23 @@ header nav ul li a:hover {
 
 }
 
+#link_icon,
+#git_icon {
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+
+}
+
 #link {
     background-color: rgb(0, 119, 255);
     border: 0;
 }
+
+
+
+
+
 
 @keyframes logo-animation {
     0% {
@@ -122,41 +177,12 @@ header nav ul li a:hover {
 
 }
 
-#title {
-    zoom: 130%;
-    border-radius: 170px;
-    width: 120px;
-    height: 110px;
-    object-fit: cover;
-    object-position: -13px 0px;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-
-
-
-}
-
-#title:hover {
-    transform: scale();
-    animation: logo-animation 0.1s;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
 
 
 h1 {
     color: white;
 }
 
-#link_icon,
-#git_icon {
-    height: 20px;
-    width: 20px;
-    border-radius: 30px;
-
-}
 
 
 
@@ -177,10 +203,14 @@ section.topo_do_site {
     gap: 40px;
 }
 
+
+
 .topo_do_site {
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 
 .flex .btn_contato button {
     width: 150px;
@@ -245,16 +275,18 @@ section.topo_do_site {
 }
 
 @media only screen and (max-width: 800px) {
-    .menu-desktop{
+    .menu-desktop {
         justify-content: unset;
     }
+
     .menu-desktop ul li {
         text-align: justify;
         display: inline;
         padding: 10px;
 
     }
-    main .interface .flex{
+
+    main .interface .flex {
         display: grid;
         padding: 20%;
         gap: 70%;
@@ -265,8 +297,7 @@ section.topo_do_site {
 }
 
 @media only screen and (max-width: 110px) {
-    header nav ul li a{
+    header nav ul li a {
         padding: 10px;
     }
 }
-
